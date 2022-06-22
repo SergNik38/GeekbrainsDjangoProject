@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block style %} {% include "style.html" %} {% endblock %}
+{% block content %}
+    <h2>Список товаров:</h2>
+    {% for item in object_list %}
+        <li>
+            <div>Наименование: {{ item.name }}</div>
+            <div>Дата поступления: {{ item.date }}</div>
+            <div>Цена: {{ item.price }}</div>
+            <div>Валюта: {{ item.unit }}</div>
+            <div>Поставщик: {{ item.provider }}</div>
+        </li>
+    {% endfor %}
+{% endblock %}
